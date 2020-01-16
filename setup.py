@@ -30,7 +30,7 @@ setup(
     install_requires=[
         "attrs==19.3.0",
         "importlib-metadata==1.3.0",
-        "more-itertools==8.0.2"
+        "more-itertools==8.0.2",
         "packaging==20.0",
         "pluggy==0.13.1",
         "py==1.8.1",
