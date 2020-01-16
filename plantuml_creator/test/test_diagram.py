@@ -191,6 +191,6 @@ diagram1 = Diagram(
     ],
 )
 def test_method_gen_code(case: str, diagram: Diagram, style: CodeStyle, expected: str, expected_errors: bool):
-    got_name, got_errors = diagram.gen_code(CodeGenerator.Context(code_style=style))
+    got_name, got_errors = diagram.gen_code(CodeGenerator.Context(code_style=style, diagram_type=DiagramType.COMPONENT))
     if expected_errors:
         assert got_errors is not None and len(got_errors) > 0

@@ -33,18 +33,18 @@ DiagramOpts = Dict[DiagramOptName, DiagramOptValue]
 
 Wrapper = Tuple[str, str]
 
+_standard_wrapper = ("@startuml", "@enduml")
+_wireframe_wrapper = ("@startsalt", "@endsalt")
+_work_breakdown_wrapper = ("@startwbs", "@endwbs")
+_mindmap_wrapper = ("@startmindmap", "@endmindmap")
+_gantt_wrapper = ("@startgantt", "@endgantt")
+_ditaa_wrapper = ("@startditaa", "@endditaa")
+
 
 class Diagram(UMLObj):
     """
     Return a valid UML diagram
     """
-    
-    standard_wrapper = ("@startuml", "@enduml")
-    wireframe_wrapper = ("@startsalt", "@endsalt")
-    work_breakdown_wrapper = ("@startwbs", "@endwbs")
-    mindmap_wrapper = ("@startmindmap", "@endmindmap")
-    gantt_wrapper = ("@startgantt", "@endgantt")
-    ditaa_wrapper = ("@startditaa", "@endditaa")
     
     standard_headers_by_types = [
         DiagramType.SEQUENCE,
@@ -85,18 +85,18 @@ class Diagram(UMLObj):
     @classmethod
     def _get_wrapper(cls, type_: DiagramType) -> Wrapper:
         if type_ in cls.standard_headers_by_types:
-            return cls.standard_wrapper
+            return _standard_wrapper
         if type_ in DiagramType.WIREFRAME:
-            return cls.wireframe_wrapper
+            return _wireframe_wrapper
         if type_ in DiagramType.WORK_BREAKDOWN_STRUCTURE:
-            return cls.work_breakdown_wrapper
+            return _work_breakdown_wrapper
         if type_ in DiagramType.MINDMAP:
-            return cls.mindmap_wrapper
+            return _mindmap_wrapper
         if type_ in DiagramType.GANTT:
-            return cls.gantt_wrapper
+            return _gantt_wrapper
         if type_ in DiagramType.DITAA:
-            return cls.ditaa_wrapper
-        return cls.standard_wrapper
+            return _ditaa_wrapper
+        return _standard_wrapper
     
     @classmethod
     def _generate_optionals(cls, type_: DiagramType, opts: DiagramOpts) -> PlantUMLCode:

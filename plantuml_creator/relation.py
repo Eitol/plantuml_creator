@@ -64,11 +64,11 @@ class Relation(UMLObj):
             quantifiers = ("", "")
         if stereotypes is None:
             stereotypes = []
+        self.obj1 = self.convert_to_variable_name(obj1)
+        self.rel_type = rel_type
+        self.obj2 = self.convert_to_variable_name(obj2)
         self.quantifiers = quantifiers
         self.stereotypes = stereotypes
-        self.obj2 = obj2
-        self.rel_type = rel_type
-        self.obj1 = obj1
     
     def gen_code(self, ctx: CodeGenerator.Context) -> Tuple[PlantUMLCode, List[Error]]:
         """
