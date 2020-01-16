@@ -1,13 +1,13 @@
 import enum
 from typing import List, Tuple, Dict, Union
 
-from code_generator import CodeGenerator
-from diagram_type import DiagramType
-from error import Error
-from shape import ShapeAttributes
-from uml_code import PlantUMLCode
-from uml_object import UMLObj, UMLObjType
-from utils import ListJoiner, JoinItem
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.diagram_type import DiagramType
+from plantuml_creator.error import Error
+from plantuml_creator.shape import ShapeAttributes
+from plantuml_creator.uml_code import PlantUMLCode
+from plantuml_creator.uml_object import UMLObj, UMLObjType
+from plantuml_creator.utils import ListJoiner, JoinItem
 
 OBJECTS_SEPARATOR = "/' OBJECTS '/"
 RELATION_SEPARATOR = "/' RELATIONS '/"

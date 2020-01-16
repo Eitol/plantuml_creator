@@ -1,13 +1,13 @@
-from code_generator import CodeGenerator
-from color import Color
-from component import Component
-from container import Container
-from shape import ShapeAttributeName
-
 import pytest
 
-from uml_class import Class, ClassType
-from uml_code import CodeStyle
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.color import Color
+from plantuml_creator.component import Component
+from plantuml_creator.container import Container
+from plantuml_creator.shape import ShapeAttributeName
+
+from plantuml_creator.uml_class import Class, ClassType
+from plantuml_creator.uml_code import CodeStyle
 
 c1 = Container(
     name="comp1",

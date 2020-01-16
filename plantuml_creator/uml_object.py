@@ -3,11 +3,11 @@ import enum
 
 from typing import List, Tuple, Optional
 
-from color import ColorHelper
-from uml_code import PlantUMLCode
-from code_generator import CodeGenerator
-from error import Error
-from shape import ShapeAttributes, ShapeAttributeName
+from plantuml_creator.color import ColorHelper
+from plantuml_creator.uml_code import PlantUMLCode
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.error import Error
+from plantuml_creator.shape import ShapeAttributes, ShapeAttributeName
 
 ObjectName = str
 

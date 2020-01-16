@@ -2,12 +2,12 @@ from typing import Tuple, List, Callable, Dict, Union
 
 import stringcase
 
-from uml_code import PlantUMLCode, CodeStyle, CodeStyleChanger
-from code_generator import CodeGenerator
-from data_types import DataType
-from error import Error
-from modifier import TypeModifier
-from uml_object import UMLObj, UMLObjType
+from plantuml_creator.uml_code import PlantUMLCode, CodeStyle, CodeStyleChanger
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.data_types import DataType
+from plantuml_creator.error import Error
+from plantuml_creator.modifier import TypeModifier
+from plantuml_creator.uml_object import UMLObj, UMLObjType
 
 
 class Variable(UMLObj):

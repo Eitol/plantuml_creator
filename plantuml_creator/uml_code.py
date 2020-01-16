@@ -2,7 +2,7 @@ import abc
 import enum
 from typing import Callable, Dict
 
-from data_types import DataType
+from plantuml_creator.data_types import DataType
 
 COMMENT_START = "/'"
 COMMENT_END = "/'"

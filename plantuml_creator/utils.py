@@ -1,9 +1,9 @@
 from typing import Any, Tuple, Union, List, Dict, Optional
 
-from code_generator import CodeGenerator
-from data_types import DataType
-from error import Error
-from uml_code import CodeStyleChanger
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.data_types import DataType
+from plantuml_creator.error import Error
+from plantuml_creator.uml_code import CodeStyleChanger
 
 EMPTY_BOUND = ("", "")
 

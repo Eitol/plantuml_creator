@@ -1,5 +1,4 @@
 import enum
-from typing import List
 
 DataType = str
 
@@ -13,6 +12,3 @@ class CommonDataType(enum.Enum):
     MAP = DataType("Map")
     SET = DataType("Set")
     List = DataType("List")
-
-
-

@@ -3,8 +3,6 @@ from typing import Union, Tuple, Optional
 
 import stringcase
 
-from error import Error
-
 
 class Color(enum.Enum):
     ALICE_BLUE = "#F0F8FF"

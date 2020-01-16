@@ -2,12 +2,12 @@ from typing import List
 
 import pytest
 
-from code_generator import CodeGenerator
-from relation import Relation, RelationType
-from uml_code import CodeStyle
-from error import Error
-from modifier import CommonAccessModifier, CommonStorageClassSpecifier, CommonTypeQualifier
-from variable import Variable
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.relation import Relation, RelationType
+from plantuml_creator.uml_code import CodeStyle
+from plantuml_creator.error import Error
+from plantuml_creator.modifier import CommonAccessModifier, CommonStorageClassSpecifier, CommonTypeQualifier
+from plantuml_creator.variable import Variable
 
 rel1 = Relation(
     obj1="animal",
@@ -33,5 +33,8 @@ rel2 = Relation(
     ],
 )
 def test_variable_gen_code(case: str, relation: Relation, expected: str):
+    """
+    Test the gen_code method
+    """
     got_name, got_errors = relation.gen_code(CodeGenerator.Context(code_style=CodeStyle.C))
     assert got_name == expected

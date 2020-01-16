@@ -1,16 +1,16 @@
 import enum
 from typing import List, Tuple
 
-from code_generator import CodeGenerator
-from color import ColorHelper
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.color import ColorHelper
 
-from uml_code import PlantUMLCode
-from error import Error
-from method import Method
-from shape import ShapeAttributes, ShapeAttributeName
-from uml_object import UMLObj, UMLObjType
-from utils import ListJoiner, JoinItem
-from variable import Variable
+from plantuml_creator.uml_code import PlantUMLCode
+from plantuml_creator.error import Error
+from plantuml_creator.method import Method
+from plantuml_creator.shape import ShapeAttributes, ShapeAttributeName
+from plantuml_creator.uml_object import UMLObj, UMLObjType
+from plantuml_creator.utils import ListJoiner, JoinItem
+from plantuml_creator.variable import Variable
 
 
 class ClassType(enum.Enum):

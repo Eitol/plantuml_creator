@@ -1,13 +1,13 @@
 import re
 from typing import List, Tuple
 
-from code_generator import CodeGenerator
-from uml_code import PlantUMLCode
-from error import Error
-from relation import Relation
-from shape import ShapeAttributes, ContainerShapeType
-from uml_object import UMLObj, UMLObjType
-from utils import ListJoiner, JoinItem
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.uml_code import PlantUMLCode
+from plantuml_creator.error import Error
+from plantuml_creator.relation import Relation
+from plantuml_creator.shape import ShapeAttributes, ContainerShapeType
+from plantuml_creator.uml_object import UMLObj, UMLObjType
+from plantuml_creator.utils import ListJoiner, JoinItem
 
 ContainerContent = Tuple[List[UMLObj], List[Relation]]
 

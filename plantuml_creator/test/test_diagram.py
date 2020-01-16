@@ -1,16 +1,15 @@
 import pytest
 
-from code_generator import CodeGenerator
-from color import Color
-from component import Component
-from container import Container, ContainerShapeType
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.color import Color
+from plantuml_creator.component import Component
+from plantuml_creator.container import Container
 from plantuml_creator.diagram import Diagram, DiagramOptName, DiagramType
-from method import Method
-from relation import Relation, RelationType, Orientation
-from shape import ShapeAttributeName, ContainerShapeType
-from uml_class import Class, ClassType
-from uml_code import CodeStyle
-from variable import Variable
+
+from plantuml_creator.relation import Relation, RelationType, Orientation
+from plantuml_creator.shape import ShapeAttributeName, ContainerShapeType
+from plantuml_creator.uml_class import Class, ClassType
+from plantuml_creator.uml_code import CodeStyle
 
 diagram1 = Diagram(
     name="Example 1",

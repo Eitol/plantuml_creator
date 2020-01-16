@@ -1,13 +1,13 @@
 from typing import Tuple, List, Dict, Callable
 
-from data_types import DataType
-from modifier import TypeModifier, AccessModifier, CommonAccessModifier
-from uml_code import PlantUMLCode, CodeStyle
-from code_generator import CodeGenerator
-from error import Error
-from uml_object import UMLObj, UMLObjType
-from utils import ListJoiner, JoinItem
-from variable import Variable
+from plantuml_creator.data_types import DataType
+from plantuml_creator.modifier import TypeModifier, AccessModifier, CommonAccessModifier
+from plantuml_creator.uml_code import PlantUMLCode, CodeStyle
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.error import Error
+from plantuml_creator.uml_object import UMLObj, UMLObjType
+from plantuml_creator.utils import ListJoiner, JoinItem
+from plantuml_creator.variable import Variable
 
 _DEFAULT_ARGS_BOUNDS = ("(", ")")
 

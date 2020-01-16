@@ -1,4 +1,4 @@
-from uml_code import CodeStyle
+from plantuml_creator.uml_code import CodeStyle
 
 DEFAULT_CODE_STYLE = CodeStyle.C
 

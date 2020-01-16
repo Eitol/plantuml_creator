@@ -2,13 +2,13 @@ from typing import List
 
 import pytest
 
-from code_generator import CodeGenerator
-from data_types import CommonDataType
-from method import Method
-from modifier import CommonAccessModifier, CommonTypeQualifier, CommonStorageClassSpecifier
-from uml_class import Class, ClassType
-from uml_code import CodeStyle
-from variable import Variable
+from plantuml_creator.code_generator import CodeGenerator
+from plantuml_creator.data_types import CommonDataType
+from plantuml_creator.method import Method
+from plantuml_creator.modifier import CommonAccessModifier, CommonTypeQualifier, CommonStorageClassSpecifier
+from plantuml_creator.uml_class import Class, ClassType
+from plantuml_creator.uml_code import CodeStyle
+from plantuml_creator.variable import Variable
 
 var_1 = Variable(name="a", type_="String", modifiers=[
     CommonAccessModifier.PUBLIC.value, CommonStorageClassSpecifier.STATIC.value, CommonTypeQualifier.CONST.value,

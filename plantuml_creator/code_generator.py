@@ -1,15 +1,27 @@
+"""
+Contains the code generation interface
+"""
 import abc
 from typing import List, Tuple
 
-import settings
-from diagram_type import DiagramType
+from plantuml_creator import settings
+from plantuml_creator.diagram_type import DiagramType
 
-from uml_code import PlantUMLCode, CodeStyle
-from error import Error
+from plantuml_creator.uml_code import PlantUMLCode, CodeStyle
+from plantuml_creator.error import Error
 
 
 class CodeGenerator(metaclass=abc.ABCMeta):
+    """
+    It is the generation interface.
+    The classes that perform it must generate valid plantuml code
+    """
+    
     class Context(object):
+        """
+        The generation context
+        """
+        
         def __init__(self, parent: 'CodeGenerator' = None, indent_level: int = 0,
                      diagram_type: DiagramType = DiagramType.UNKNOWN,
                      code_style: CodeStyle = settings.CODE_STYLE):
