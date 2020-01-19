@@ -13,7 +13,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="plantuml_creator",
-    version="1.0.5",
+    version="1.0.7",
     description="Library to generate plantuml code from python objects",
     long_description=README,
     long_description_content_type="text/markdown",
