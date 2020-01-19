@@ -1,6 +1,11 @@
 import abc
+import base64
 import enum
+import string
 from typing import Callable, Dict
+from zlib import compress
+
+import six
 
 from plantuml_creator.data_types import DataType
 
@@ -72,3 +77,19 @@ class CodeStyleChanger(metaclass=abc.ABCMeta):
         if new_style in cls.styles_map:
             return cls.styles_map[new_style](data_type)
         return data_type
+
+
+_plantuml_alphabet = string.digits + string.ascii_uppercase + string.ascii_lowercase + '-_'
+_base64_alphabet = string.ascii_uppercase + string.ascii_lowercase + string.digits + '+/'
+_b64_to_plantuml = bytes.maketrans(_base64_alphabet.encode('utf-8'), _plantuml_alphabet.encode('utf-8'))
+
+
+class Compressor(object):
+    
+    @classmethod
+    def deflate_and_encode(cls, plantuml_text: str) -> str:
+        """zlib compress the plantuml text and encode it for the plantuml server.
+        """
+        zlibbed_str = compress(plantuml_text.encode('utf-8'))
+        compressed_string = zlibbed_str[2:-4]
+        return base64.b64encode(compressed_string).translate(_b64_to_plantuml).decode('utf-8')
