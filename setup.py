@@ -40,7 +40,7 @@ setup(
         "str2bool==1.1",
         "stringcase==1.2.0",
         "wcwidth==0.1.8",
-        "zipp==0.6.0",
+        "zipp==3.19.1",
     ],
     entry_points={
         "console_scripts": []
